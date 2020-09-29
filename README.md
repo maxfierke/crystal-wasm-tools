@@ -59,4 +59,4 @@ for wasm.
   that throws exceptions will crash (if it throws). This alone _severely_ limits
   use of Crystal on wasm, as a lot of code relies on exception handling, including
   parts of the stdlib.
-* There are [strange require order dependencies I don't understand](https://github.com/crystal-lang/crystal/commit/56a6a148853ef26f52c0ebfd7cfe08887ec9e88f)
+* There are [strange require order dependencies I don't understand](https://github.com/maxfierke/crystal/commit/56a6a148853ef26f52c0ebfd7cfe08887ec9e88f)
