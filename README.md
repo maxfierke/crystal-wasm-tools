@@ -60,3 +60,21 @@ for wasm.
   use of Crystal on wasm, as a lot of code relies on exception handling, including
   parts of the stdlib.
 * There are [strange require order dependencies I don't understand](https://github.com/maxfierke/crystal/commit/56a6a148853ef26f52c0ebfd7cfe08887ec9e88f)
+
+## Future Plans
+
+* Add support for some polling-based stuff using `poll_oneoff`
+
+* Add support for stuff that uses libgmp. should unblock a few specs.
+
+* Add support for stuff that uses OpenSSL. [Prior work](https://github.com/wapm-packages/OpenSSL) shows
+  that OpenSSL can be compiled in some form for wasm. None of the networking APIs
+  or things that use signals, but appears the crypto side might work out okay.
+
+* Add support for stuff that uses zlib. Likely similar story as libpcre or openssl.
+  zlib shouldn't depend on too many unsupported libc APIs.
+
+* Add support for emulated mman and emulated signals. Maybe this'll help?
+
+* Add support for bohem gc. theoretically it has been compiled for asm.js and w/
+  emscripten. remains to be seen if there's enough there for wasi
